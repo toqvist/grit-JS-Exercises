@@ -81,7 +81,7 @@ for (let i = 0; i < 3; i++) {
                 setColor = 'white';
             }
             
-         //Left div   
+         //Center div   
         } else if (i===1) {
 
             p.innerText = 9-j;
