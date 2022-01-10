@@ -1,21 +1,22 @@
 
-for (let i = 0; i < 5 ; i++) {
+for (let i = 1; i <= 5 ; i++) {
    
     let p = document.createElement('p');
     document.body.appendChild(p);
     
-    p.innerText = 'Rad ' + (i+1);
+    p.innerText = 'Rad ' + (i);
     p.style.textAlign = 'center';
-    p.style.paddingTop = '0.15em';
-    
+   
+    //The font adds some padding at the bottom, to center add some padding at the top.
+    p.style.paddingTop = '0.3em'
+    p.style.margin = '0.5em 0em';
+
     p.style.color = 'hsl(240, 90%, 70%)';
     
-    p.style.fontSize = (10+i*10) + 'px'
+    p.style.fontSize = (10*i) + 'px'
     p.style.fontWeight = 'bold'
     p.style.fontFamily = 'Nimbus Roman'
 
-    p.style.margin = '0.5em 0em';
-    
     //Go from light green hsl(120, 90%, 85%) to ligh blue hsl( 	hsl(200, 90%, 85%)
     //Difference in color hue is 80, to do it in four steps each step needs to be 20
     let hue = 120 + (i*20);
@@ -36,7 +37,7 @@ box.style.justifyContent = 'space-around'
 box.style.padding = '60px'
 
 
-
+//Make three lavender boxes, ordered horizontally
 for (let i = 0; i < 3; i++) {
 
     let div = document.createElement('div');
@@ -47,16 +48,16 @@ for (let i = 0; i < 3; i++) {
 
     const numberArray = ['ett', 'två', 'tre', 'fyra','fem', 'sex', 'sju', 'åtta', 'nio', 'tio']
 
+    //Make 10 text-boxes in alternating colors, ordered vertically
     for (let j = 0; j < 10; j++) {
 
         const p = document.createElement('p');
         div.appendChild(p);
 
         p.style.margin = '0px';
-        p.style.paddingTop = '0.25em';
+        p.style.paddingTop = '0.3em';
         p.style.width = '40px';
-        
-        p.style.fontSize = '13px';
+
         p.style.fontFamily = 'Nimbus Roman';
 
         let setBackground;
@@ -65,8 +66,9 @@ for (let i = 0; i < 3; i++) {
         //Left div
         if (i===0) {
 
-            p.innerText =j; 
-            
+            p.innerText =j;
+            //p.style.textAlign = 'start';
+
             if (j%2) {
                 setBackground= 'white';
                 setColor = 'black';
@@ -105,7 +107,7 @@ for (let i = 0; i < 3; i++) {
 
             p.innerText = numberArray[j];
             p.style.textAlign = 'end'
-
+        
             if (j%2) {
                 setBackground= 'white';
                 setColor = 'black';
